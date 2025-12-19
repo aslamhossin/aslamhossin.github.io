@@ -138,7 +138,7 @@ SITE_CONFIG = {
         'SDK Integration': ['Modiface', 'Sendbird', 'Firebase', 'Wowza', 'Google Maps', 'Location Services'],
         'Testing & CI/CD': ['TDD', 'JUnit5', 'MockK', 'Bitrise', 'GitHub Actions', 'Crashlytics'],
         'Tools': ['Android Studio', 'Gradle', 'Git', 'Profiler', 'LeakCanary', 'Jira', 'Figma'],
-        'Languages': ['Kotlin', 'Java', 'Business English'],
+        'Languages': ['Business English', 'Japanese (Learning)'],
     },
     'learning_skills': {
         'Emerging Tech': ['Kotlin Multiplatform Mobile (KMM)', 'Jetpack DataStore (replacing SharedPreferences)'],

@@ -75,6 +75,13 @@ class PortfolioGenerator:
         output_file.write_text(html)
         print(f"✓ Generated: {output_file}")
     
+    def generate_blog(self):
+        """Generate the blog page"""
+        html = self.render_template('blog.html', {})
+        output_file = self.output_dir / 'blog.html'
+        output_file.write_text(html)
+        print(f"✓ Generated: {output_file}")
+    
     def build(self):
         """Build the entire site"""
         print("🔨 Building portfolio website...\n")
@@ -82,6 +89,7 @@ class PortfolioGenerator:
         self.copy_static_files()
         self.generate_index()
         self.generate_projects()
+        self.generate_blog()
         self.generate_resume()
         self.generate_about()
         self.generate_404()

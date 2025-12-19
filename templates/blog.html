@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - {{ config.title }}</title>
+    <meta name="description" content="Technical articles and insights by {{ config.author }}">
+    <link rel="stylesheet" href="{{ config.portfolio_url }}/static/style.css">
+    <link rel="stylesheet" href="{{ config.portfolio_url }}/static/resume.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">{{ config.author }}</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="/blog.html" class="nav-link active">Blog</a></li>
+                <li class="nav-item"><a href="/resume.html" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="blog-section">
+            <h1>Blog & Articles</h1>
+            
+            <div class="blog-intro">
+                <p>
+                    I write technical articles and share insights on Android development, architecture patterns, 
+                    performance optimization, and best practices in mobile engineering.
+                </p>
+            </div>
+
+            <div class="blog-card featured">
+                <div class="blog-header">
+                    <h2>📝 Read My Articles on Medium</h2>
+                    <span class="blog-platform">Medium</span>
+                </div>
+                
+                <p class="blog-description">
+                    {{ config.blog.description }}
+                </p>
+
+                <div class="blog-topics">
+                    <h3>Topics I Write About:</h3>
+                    <ul>
+                        <li>Kotlin & Android Development</li>
+                        <li>Architecture Patterns & Clean Code</li>
+                        <li>Jetpack Compose & Modern UI</li>
+                        <li>Performance Optimization</li>
+                        <li>Test-Driven Development</li>
+                        <li>Mobile Development Best Practices</li>
+                    </ul>
+                </div>
+
+                <a href="{{ config.blog.url }}" target="_blank" class="btn btn-primary">
+                    📖 Read Articles on Medium
+                </a>
+            </div>
+
+            <div class="blog-stats">
+                <p>
+                    💡 Join me on Medium to follow my latest articles on mobile development, 
+                    architectural insights, and Android engineering best practices.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 {{ config.author }}. All rights reserved.</p>
+            <div class="social-links">
+                {% for platform, url in config.social_links.items() %}
+                <a href="{{ url }}" target="_blank">{{ platform }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

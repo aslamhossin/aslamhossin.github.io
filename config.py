@@ -14,6 +14,7 @@ SITE_CONFIG = {
     'social_links': {
         'github': 'https://github.com/aslamhossin',
         'linkedin': 'https://linkedin.com/in/aslamhossin',
+        'medium': 'https://medium.com/@aslam.iit.ju41',
     },
     'projects': [
         {
@@ -144,5 +145,10 @@ SITE_CONFIG = {
         'Advanced Patterns': ['Model-View-Intent (MVI)', 'Feature Flags & A/B Testing'],
         'Backend Integration': ['GraphQL', 'WebSocket Real-time Communication'],
         'AI/ML': ['TensorFlow Lite for Mobile', 'On-device ML Models'],
+    },
+    'blog': {
+        'platform': 'Medium',
+        'url': 'https://medium.com/@aslam.iit.ju41',
+        'description': 'Technical articles and insights on Android development, architecture patterns, and best practices',
     },
 }

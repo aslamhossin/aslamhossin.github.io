@@ -58,7 +58,7 @@
 .resume-section h2 {
     font-size: 1.5rem;
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--border-color);
     text-align: left;
@@ -67,7 +67,7 @@
 .resume-section p {
     color: var(--text-color);
     line-height: 1.8;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Qualifications List */
@@ -77,11 +77,11 @@
 }
 
 .qualifications-list li {
-    padding: 0.75rem 0 0.75rem 2rem;
+    padding: 0.4rem 0 0.4rem 2rem;
     color: var(--text-color);
     position: relative;
     border-left: 3px solid var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .qualifications-list li:before {
@@ -107,7 +107,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .job-header h3 {
@@ -125,12 +125,12 @@
 .job-company {
     color: var(--primary-color);
     font-weight: 500;
-    margin: 0.25rem 0;
+    margin: 0.1rem 0;
 }
 
 .job-description {
     color: var(--light-text);
-    margin: 0.5rem 0 0.75rem 0;
+    margin: 0.25rem 0 0.5rem 0;
     font-style: italic;
 }
 
@@ -141,7 +141,7 @@
 }
 
 .job-highlights li {
-    padding: 0.35rem 0 0.35rem 1.5rem;
+    padding: 0.2rem 0 0.2rem 1.5rem;
     color: var(--text-color);
     position: relative;
     font-size: 0.95rem;
@@ -169,7 +169,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.1rem;
 }
 
 .edu-header h3 {
@@ -186,13 +186,13 @@
 .edu-institution {
     color: var(--primary-color);
     font-weight: 500;
-    margin: 0.25rem 0;
+    margin: 0.1rem 0;
 }
 
 .edu-certificate {
     color: var(--light-text);
     font-size: 0.9rem;
-    margin: 0.25rem 0;
+    margin: 0.1rem 0;
 }
 
 /* Skills Grid */

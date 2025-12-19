@@ -52,7 +52,7 @@
 
 /* Resume Sections */
 .resume-section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .resume-section h2 {
@@ -94,8 +94,8 @@
 
 /* Job Entry */
 .job-entry {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -156,8 +156,8 @@
 
 /* Education Entry */
 .education-entry {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -225,9 +225,10 @@
 /* Currently Learning Section */
 .learning-section {
     background-color: rgba(37, 99, 235, 0.05);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 0.5rem;
     border-left: 4px solid var(--primary-color);
+    margin: 1.5rem 0;
 }
 
 .learning-grid {
@@ -267,8 +268,8 @@
 /* Resume Download */
 .resume-download {
     text-align: center;
-    margin-top: 3rem;
-    padding-top: 2rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
     border-top: 2px solid var(--primary-color);
 }
 

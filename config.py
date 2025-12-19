@@ -23,6 +23,7 @@ SITE_CONFIG = {
             'role': 'Application Engineer (Android)',
             'company': 'Rakuten',
             'date': 'Oct 2024 - Present',
+            'metrics': 'Multi-tenant platform • 500K+ daily active users',
         },
         {
             'title': 'PayPay Fintech Integration',
@@ -31,6 +32,7 @@ SITE_CONFIG = {
             'role': 'Senior Mobile Engineer',
             'company': 'Monstarlab',
             'date': '2018-2024',
+            'metrics': '70M+ users • Fintech ecosystem',
         },
         {
             'title': 'TAXA 4x35 - Ride Sharing App',
@@ -39,6 +41,7 @@ SITE_CONFIG = {
             'role': 'Senior Mobile Engineer',
             'company': 'Monstarlab',
             'date': '2018-2024',
+            'metrics': '60% codebase migration • 30% crash reduction',
         },
         {
             'title': 'GeneLife 3.0',
@@ -47,6 +50,16 @@ SITE_CONFIG = {
             'role': 'Senior Mobile Engineer',
             'company': 'Monstarlab',
             'date': '2018-2024',
+            'metrics': 'Good Design Award 2019',
+        },
+        {
+            'title': 'Mitsukoshi Isetan Remote Shopping',
+            'description': 'Launched remote video chat for personal shopping with premium UX. Major revenue contributor for Japanese retail market.',
+            'technologies': ['Kotlin', 'Video Streaming', 'Real-time Communication', 'Jetpack'],
+            'role': 'Senior Mobile Engineer',
+            'company': 'Monstarlab',
+            'date': '2018-2024',
+            'metrics': '$276M revenue FY2020',
         },
     ],
     'work_experience': [
@@ -125,5 +138,11 @@ SITE_CONFIG = {
         'Testing & CI/CD': ['TDD', 'JUnit5', 'MockK', 'Bitrise', 'GitHub Actions', 'Crashlytics'],
         'Tools': ['Android Studio', 'Gradle', 'Git', 'Profiler', 'LeakCanary', 'Jira', 'Figma'],
         'Languages': ['Kotlin', 'Java', 'Business English'],
+    },
+    'learning_skills': {
+        'Emerging Tech': ['Kotlin Multiplatform Mobile (KMM)', 'Jetpack DataStore (replacing SharedPreferences)'],
+        'Advanced Patterns': ['Model-View-Intent (MVI)', 'Feature Flags & A/B Testing'],
+        'Backend Integration': ['GraphQL', 'WebSocket Real-time Communication'],
+        'AI/ML': ['TensorFlow Lite for Mobile', 'On-device ML Models'],
     },
 }

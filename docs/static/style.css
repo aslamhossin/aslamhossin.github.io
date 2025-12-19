@@ -197,6 +197,21 @@ section h1 {
     line-height: 1.6;
 }
 
+.project-company {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.project-metrics {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
 .tech-stack {
     display: flex;
     flex-wrap: wrap;

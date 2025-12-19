@@ -273,7 +273,48 @@
 }
 
 .resume-download p {
-    margin: 0;
+    margin: 0.5rem 0;
+}
+
+.download-hint {
+    font-size: 0.9rem;
+    color: var(--light-text);
+    margin-top: 1rem;
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer,
+    .resume-download,
+    .resume-download p {
+        display: none;
+    }
+
+    .resume-container {
+        padding: 0;
+        box-shadow: none;
+        border: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .resume-section,
+    .job-entry,
+    .education-entry {
+        page-break-inside: avoid;
+    }
+
+    .resume-header {
+        border-bottom: 1px solid #333;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
 }
 
 /* Responsive */

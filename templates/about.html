@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - {{ config.title }}</title>
+    <meta name="description" content="About {{ config.author }}">
+    <link rel="stylesheet" href="{{ config.portfolio_url }}/static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">{{ config.author }}</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="/resume.html" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="/about.html" class="nav-link active">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="about-section">
+            <h1>About Me</h1>
+            <div class="about-content">
+                <p>
+                    I'm a passionate full-stack developer with a love for creating elegant solutions to complex problems.
+                    With experience in both frontend and backend development, I enjoy building applications that are not just
+                    functional but also delightful to use.
+                </p>
+                <p>
+                    When I'm not coding, you can find me exploring new technologies, contributing to open source projects,
+                    or sharing knowledge with the developer community.
+                </p>
+                
+                <h2>Get In Touch</h2>
+                <p>
+                    Feel free to reach out to me if you'd like to collaborate on a project, discuss an idea, or simply
+                    want to connect. You can find me on:
+                </p>
+                <ul class="about-links">
+                    {% for platform, url in config.social_links.items() %}
+                    <li><a href="{{ url }}" target="_blank">{{ platform|title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 {{ config.author }}. All rights reserved.</p>
+            <div class="social-links">
+                {% for platform, url in config.social_links.items() %}
+                <a href="{{ url }}" target="_blank">{{ platform }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

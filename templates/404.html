@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - {{ config.title }}</title>
+    <link rel="stylesheet" href="{{ config.portfolio_url }}/static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">{{ config.author }}</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="/resume.html" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="error-section">
+            <h1>404</h1>
+            <p>Page Not Found</p>
+            <p>Sorry, the page you're looking for doesn't exist.</p>
+            <a href="/" class="btn btn-primary">Go Home</a>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 {{ config.author }}. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

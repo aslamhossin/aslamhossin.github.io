@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - {{ config.title }}</title>
+    <meta name="description" content="Resume of {{ config.author }}">
+    <link rel="stylesheet" href="{{ config.portfolio_url }}/static/style.css">
+    <link rel="stylesheet" href="{{ config.portfolio_url }}/static/resume.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">{{ config.author }}</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="/resume.html" class="nav-link active">Resume</a></li>
+                <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="resume-container">
+        <!-- Header -->
+        <header class="resume-header">
+            <h1>{{ config.author }}</h1>
+            <p class="resume-title">{{ config.title_short }}</p>
+            <div class="resume-contact">
+                <span>📍 {{ config.location }}</span>
+                <span>📧 <a href="mailto:{{ config.email }}">{{ config.email }}</a></span>
+                <span>📱 {{ config.phone }}</span>
+                <span>🔗 <a href="{{ config.social_links.linkedin }}" target="_blank">LinkedIn</a></span>
+                <span>🐙 <a href="{{ config.social_links.github }}" target="_blank">GitHub</a></span>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="resume-section">
+            <h2>Professional Summary</h2>
+            <p>
+                Android engineer with 9+ years building high-performance mobile applications in Kotlin and Java. 
+                Proven fintech expertise through PayPay project work (network security, SDK integration) and current 
+                in-house operations at Rakuten. Strong ownership track record: led Java-to-Kotlin migration (60% conversion, 3% crash reduction) 
+                and architectural refactoring initiatives. Experienced in TDD, agile practices, and cross-functional collaboration.
+            </p>
+        </section>
+
+        <!-- Key Qualifications -->
+        <section class="resume-section">
+            <h2>Key Qualifications</h2>
+            <ul class="qualifications-list">
+                <li>9+ years Android development; expert in Kotlin, Java, Jetpack Compose, coroutines, Flow, MVVM, Redux, Clean Architecture</li>
+                <li>Fintech experience: PayPay network security implementation, SDK integrations (Sendbird, Firebase); current role at Rakuten fintech ecosystem</li>
+                <li>Proven ownership: Led Java-to-Kotlin migration (60% codebase, 3% crash reduction); refactored Rakuten core features resolving technical debt</li>
+                <li>Test-Driven Development: Hands-on TDD experience on PayPay and Rakuten projects; JUnit5, MockK with CI/CD pipelines</li>
+                <li>Strong REST API integration, agile development, code reviews, and in-house service operation</li>
+                <li>Business conversational English; actively learning Japanese</li>
+            </ul>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="resume-section">
+            <h2>Work Experience</h2>
+            {% for job in config.work_experience %}
+            <div class="job-entry">
+                <div class="job-header">
+                    <h3>{{ job.position }}</h3>
+                    <span class="job-date">{{ job.date }}</span>
+                </div>
+                <p class="job-company">{{ job.company }} • {{ job.location }}</p>
+                <p class="job-description">{{ job.description }}</p>
+                <ul class="job-highlights">
+                    {% for highlight in job.highlights %}
+                    <li>{{ highlight }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </section>
+
+        <!-- Education -->
+        <section class="resume-section">
+            <h2>Education</h2>
+            {% for edu in config.education %}
+            <div class="education-entry">
+                <div class="edu-header">
+                    <h3>{{ edu.degree }}</h3>
+                    <span class="edu-date">{{ edu.date }}</span>
+                </div>
+                <p class="edu-institution">{{ edu.institution }}</p>
+                {% if edu.certificate %}
+                <p class="edu-certificate">Certificate: {{ edu.certificate }}</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </section>
+
+        <!-- Skills -->
+        <section class="resume-section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                {% for category, items in config.skills.items() %}
+                <div class="skill-block">
+                    <h4>{{ category }}</h4>
+                    <p>{{ items|join(', ') }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Download Resume -->
+        <section class="resume-download">
+            <p>📥 <a href="#" class="btn btn-primary">Download PDF Resume</a></p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 {{ config.author }}. All rights reserved.</p>
+            <div class="social-links">
+                {% for platform, url in config.social_links.items() %}
+                <a href="{{ url }}" target="_blank">{{ platform }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

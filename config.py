@@ -134,7 +134,7 @@ SITE_CONFIG = {
     ],
     'skills': {
         'Android': ['Kotlin', 'Java', 'Jetpack Compose', 'View System', 'Coroutines', 'Flow', 'Room', 'WorkManager', 'Navigation', 'Lifecycle'],
-        'Architecture': ['MVVM', 'MVI', 'Redux', 'Clean Architecture', 'DI (Hilt/Koin)', 'OOP'],
+        'Architecture': ['MVVM', 'Redux (State Management)', 'MVI', 'Clean Architecture', 'DI (Hilt/Koin)', 'OOP'],
         'SDK Integration': ['Modiface', 'Sendbird', 'Firebase', 'Wowza', 'Google Maps', 'Location Services'],
         'Testing & CI/CD': ['TDD', 'JUnit5', 'MockK', 'Bitrise', 'GitHub Actions', 'Crashlytics'],
         'Tools': ['Android Studio', 'Gradle', 'Git', 'Profiler', 'LeakCanary', 'Jira', 'Figma'],

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Aslam Hossin - Android Engineer - Technical Insights</title>
+    <meta name="description" content="Cross-platform technical insights and best practices">
+    <link rel="stylesheet" href="https://aslamhossin.github.io/static/style.css">
+    <link rel="stylesheet" href="https://aslamhossin.github.io/static/insights.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Md Aslam Hossin</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="/blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="/insights.html" class="nav-link active">Insights</a></li>
+                <li class="nav-item"><a href="/resume.html" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="/about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="insights-hero">
+        <div class="insights-hero-content">
+            <h1>Technical Insights</h1>
+            <p class="subtitle">Cross-platform design patterns and best practices across Android, Backend, and Web</p>
+        </div>
+    </section>
+
+    <section class="insights-section">
+        <div class="container">
+            <div class="insights-intro">
+                <h2>Architecture & Design Patterns</h2>
+                <p>Exploring common architectural challenges and solutions across different platforms. These insights help bridge the gap between Android and backend development, ensuring consistent patterns and practices.</p>
+            </div>
+
+            <div class="insights-table-wrapper">
+                <table class="insights-table">
+                    <thead>
+                        <tr>
+                            <th>When designing...</th>
+                            <th>Think about...</th>
+                            <th>Android Example</th>
+                            <th>Backend Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="column-primary">Data Models</td>
+                            <td>Encapsulation + Validation</td>
+                            <td class="column-code">ViewModel with StateFlow rules</td>
+                            <td class="column-code">Entity with JPA annotations</td>
+                        </tr>
+                        <tr>
+                            <td class="column-primary">Architecture Layers</td>
+                            <td>Abstraction boundaries</td>
+                            <td class="column-code">Use Cases between ViewModel and Repository</td>
+                            <td class="column-code">Service interfaces between Controller and Repository</td>
+                        </tr>
+                        <tr>
+                            <td class="column-primary">Testing</td>
+                            <td>Polymorphism for test doubles</td>
+                            <td class="column-code">Mock repositories for unit tests</td>
+                            <td class="column-code">Mock services in integration tests</td>
+                        </tr>
+                        <tr>
+                            <td class="column-primary">Extensibility</td>
+                            <td>Open/Closed principle</td>
+                            <td class="column-code">New repository implementations</td>
+                            <td class="column-code">New strategy implementations</td>
+                        </tr>
+                        <tr>
+                            <td class="column-primary">State Management</td>
+                            <td>Unidirectional data flow</td>
+                            <td class="column-code">Redux/MVI with immutable state</td>
+                            <td class="column-code">Event sourcing with snapshots</td>
+                        </tr>
+                        <tr>
+                            <td class="column-primary">Error Handling</td>
+                            <td>Graceful degradation</td>
+                            <td class="column-code">Try-catch with Result type</td>
+                            <td class="column-code">Exception handling with logging</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insights-cards">
+                <div class="insight-card">
+                    <h3>📱 Mobile Considerations</h3>
+                    <ul>
+                        <li>Memory constraints</li>
+                        <li>Battery optimization</li>
+                        <li>Network efficiency</li>
+                        <li>UI responsiveness</li>
+                    </ul>
+                </div>
+                <div class="insight-card">
+                    <h3>⚙️ Backend Considerations</h3>
+                    <ul>
+                        <li>Scalability</li>
+                        <li>Data consistency</li>
+                        <li>API performance</li>
+                        <li>Load balancing</li>
+                    </ul>
+                </div>
+                <div class="insight-card">
+                    <h3>🔗 Integration Points</h3>
+                    <ul>
+                        <li>API contracts</li>
+                        <li>Error codes</li>
+                        <li>Data formats</li>
+                        <li>Retry strategies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Md Aslam Hossin. All rights reserved.</p>
+            <div class="social-links">
+                
+                <a href="https://github.com/aslamhossin" target="_blank">github</a>
+                
+                <a href="https://linkedin.com/in/aslamhossin" target="_blank">linkedin</a>
+                
+                <a href="https://medium.com/@aslam.iit.ju41" target="_blank">medium</a>
+                
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

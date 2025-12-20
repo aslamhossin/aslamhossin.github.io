@@ -1,5 +1,5 @@
 /* ========================================
-   Blog Styles
+   Blog Styles - Liquid Glass
    ======================================== */
 
 .blog-section {
@@ -13,14 +13,18 @@
     color: var(--text-color);
     margin-bottom: 2rem;
     text-align: center;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
 .blog-intro {
     text-align: center;
     margin-bottom: 3rem;
     padding: 2rem;
-    background-color: var(--background-color);
-    border-radius: 0.5rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
 }
 
 .blog-intro p {
@@ -31,24 +35,26 @@
 
 /* Blog Card */
 .blog-card {
-    background: white;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
     padding: 2.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid var(--border-color);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--glass-border);
     transition: all 0.3s ease;
     margin-bottom: 2rem;
 }
 
 .blog-card:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border-color: var(--primary-color);
-    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(0, 212, 255, 0.3);
+    background: rgba(0, 212, 255, 0.08);
+    transform: translateY(-8px);
 }
 
 .blog-card.featured {
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-    border: 2px solid var(--primary-color);
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.3);
 }
 
 .blog-header {
@@ -57,22 +63,25 @@
     align-items: center;
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px solid rgba(0, 212, 255, 0.3);
 }
 
 .blog-header h2 {
     color: var(--primary-color);
     margin: 0;
     font-size: 1.75rem;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
 }
 
 .blog-platform {
-    background-color: var(--primary-color);
-    color: white;
+    background: rgba(0, 212, 255, 0.2);
+    color: var(--primary-color);
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     font-size: 0.85rem;
     font-weight: 600;
+    border: 1px solid rgba(0, 212, 255, 0.4);
+    backdrop-filter: blur(10px);
 }
 
 .blog-description {
@@ -86,15 +95,18 @@
 .blog-topics {
     margin: 2rem 0;
     padding: 1.5rem;
-    background-color: white;
+    background: rgba(0, 212, 255, 0.08);
     border-left: 4px solid var(--primary-color);
     border-radius: 0.375rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
 }
 
 .blog-topics h3 {
     color: var(--primary-color);
     margin: 0 0 1rem 0;
     font-size: 1.1rem;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
 }
 
 .blog-topics ul {
@@ -105,7 +117,7 @@
 
 .blog-topics li {
     padding: 0.5rem 0 0.5rem 1.5rem;
-    color: var(--text-color);
+    color: var(--light-text);
     position: relative;
 }
 
@@ -121,9 +133,12 @@
 .blog-stats {
     text-align: center;
     padding: 2rem;
-    background-color: var(--background-color);
-    border-radius: 0.5rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
     margin-top: 3rem;
+    box-shadow: var(--shadow);
 }
 
 .blog-stats p {

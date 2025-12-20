@@ -89,6 +89,14 @@ class PortfolioGenerator:
         output_file.write_text(html)
         print(f"✓ Generated: {output_file}")
     
+    def generate_insights_embed_table(self):
+        """Generate embeddable insights table"""
+        with open(self.template_dir / 'insights-embed-table.html', 'r') as f:
+            html = f.read()
+        output_file = self.output_dir / 'insights-embed-table.html'
+        output_file.write_text(html)
+        print(f"✓ Generated: {output_file}")
+    
     def build(self):
         """Build the entire site"""
         print("🔨 Building portfolio website...\n")
@@ -98,6 +106,7 @@ class PortfolioGenerator:
         self.generate_projects()
         self.generate_blog()
         self.generate_insights()
+        self.generate_insights_embed_table()
         self.generate_resume()
         self.generate_about()
         self.generate_404()

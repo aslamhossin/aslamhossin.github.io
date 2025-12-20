@@ -37,84 +37,27 @@
                 <p>Exploring common architectural challenges and solutions across different platforms. These insights help bridge the gap between Android and backend development, ensuring consistent patterns and practices.</p>
             </div>
 
-            <div class="insights-table-wrapper">
-                <table class="insights-table">
-                    <thead>
-                        <tr>
-                            <th>When designing...</th>
-                            <th>Think about...</th>
-                            <th>Android Example</th>
-                            <th>Backend Example</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="column-primary">Data Models</td>
-                            <td>Encapsulation + Validation</td>
-                            <td class="column-code">ViewModel with StateFlow rules</td>
-                            <td class="column-code">Entity with JPA annotations</td>
-                        </tr>
-                        <tr>
-                            <td class="column-primary">Architecture Layers</td>
-                            <td>Abstraction boundaries</td>
-                            <td class="column-code">Use Cases between ViewModel and Repository</td>
-                            <td class="column-code">Service interfaces between Controller and Repository</td>
-                        </tr>
-                        <tr>
-                            <td class="column-primary">Testing</td>
-                            <td>Polymorphism for test doubles</td>
-                            <td class="column-code">Mock repositories for unit tests</td>
-                            <td class="column-code">Mock services in integration tests</td>
-                        </tr>
-                        <tr>
-                            <td class="column-primary">Extensibility</td>
-                            <td>Open/Closed principle</td>
-                            <td class="column-code">New repository implementations</td>
-                            <td class="column-code">New strategy implementations</td>
-                        </tr>
-                        <tr>
-                            <td class="column-primary">State Management</td>
-                            <td>Unidirectional data flow</td>
-                            <td class="column-code">Redux/MVI with immutable state</td>
-                            <td class="column-code">Event sourcing with snapshots</td>
-                        </tr>
-                        <tr>
-                            <td class="column-primary">Error Handling</td>
-                            <td>Graceful degradation</td>
-                            <td class="column-code">Try-catch with Result type</td>
-                            <td class="column-code">Exception handling with logging</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <div class="insights-list">
+                <div class="insight-item">
+                    <div class="insight-header">
+                        <h3>Cross-Platform Design Patterns</h3>
+                        <span class="insight-badge">Core</span>
+                    </div>
+                    <p class="insight-description">A comprehensive table comparing architectural patterns, testing strategies, and design principles across Android and backend platforms.</p>
+                    
+                    <div class="embed-section">
+                        <h4>📌 Embed in Medium:</h4>
+                        <div class="embed-code">
+                            <code>&lt;iframe src="https://aslamhossin.github.io/insights-embed-table.html" width="100%" height="600" frameborder="0" style="border-radius: 8px; margin: 20px 0;"&gt;&lt;/iframe&gt;</code>
+                            <button class="copy-btn" onclick="copyToClipboard(this)">📋 Copy</button>
+                        </div>
+                        <p class="embed-hint">Paste the above iframe code in Medium's custom HTML block</p>
+                    </div>
 
-            <div class="insights-cards">
-                <div class="insight-card">
-                    <h3>📱 Mobile Considerations</h3>
-                    <ul>
-                        <li>Memory constraints</li>
-                        <li>Battery optimization</li>
-                        <li>Network efficiency</li>
-                        <li>UI responsiveness</li>
-                    </ul>
-                </div>
-                <div class="insight-card">
-                    <h3>⚙️ Backend Considerations</h3>
-                    <ul>
-                        <li>Scalability</li>
-                        <li>Data consistency</li>
-                        <li>API performance</li>
-                        <li>Load balancing</li>
-                    </ul>
-                </div>
-                <div class="insight-card">
-                    <h3>🔗 Integration Points</h3>
-                    <ul>
-                        <li>API contracts</li>
-                        <li>Error codes</li>
-                        <li>Data formats</li>
-                        <li>Retry strategies</li>
-                    </ul>
+                    <div class="preview-section">
+                        <h4>👁️ Preview:</h4>
+                        <a href="insights-embed-table.html" class="preview-link" target="_blank">View Full Table →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -134,5 +77,18 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function copyToClipboard(button) {
+            const code = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = button.textContent;
+                button.textContent = '✅ Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>

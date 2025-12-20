@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-Platform Design Patterns</title>
+    <style>
+        :root {
+            --primary-color: #00d4ff;
+            --secondary-color: #0099cc;
+            --background-color: #0a0e27;
+            --text-color: #ffffff;
+            --light-text: #b0b8cc;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --shadow: 0 8px 32px rgba(0, 212, 255, 0.1);
+            --shadow-lg: 0 20px 60px rgba(0, 212, 255, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0f1632 100%);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .table-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 1rem;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            overflow-x: auto;
+        }
+
+        .insights-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .insights-table thead {
+            background: rgba(0, 212, 255, 0.15);
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .insights-table th {
+            padding: 1rem;
+            text-align: left;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+        }
+
+        .insights-table tbody tr {
+            border-bottom: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .insights-table tbody tr:hover {
+            background: rgba(0, 212, 255, 0.08);
+            box-shadow: inset 0 0 20px rgba(0, 212, 255, 0.1);
+        }
+
+        .insights-table td {
+            padding: 1.25rem;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .column-primary {
+            font-weight: 600;
+            color: var(--primary-color);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+        }
+
+        .column-code {
+            background: rgba(0, 212, 255, 0.08);
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            border-left: 3px solid var(--primary-color);
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .table-container {
+                padding: 1rem;
+            }
+
+            .insights-table th,
+            .insights-table td {
+                padding: 0.75rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table class="insights-table">
+            <thead>
+                <tr>
+                    <th>When designing...</th>
+                    <th>Think about...</th>
+                    <th>Android Example</th>
+                    <th>Backend Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="column-primary">Data Models</td>
+                    <td>Encapsulation + Validation</td>
+                    <td class="column-code">ViewModel with StateFlow rules</td>
+                    <td class="column-code">Entity with JPA annotations</td>
+                </tr>
+                <tr>
+                    <td class="column-primary">Architecture Layers</td>
+                    <td>Abstraction boundaries</td>
+                    <td class="column-code">Use Cases between ViewModel and Repository</td>
+                    <td class="column-code">Service interfaces between Controller and Repository</td>
+                </tr>
+                <tr>
+                    <td class="column-primary">Testing</td>
+                    <td>Polymorphism for test doubles</td>
+                    <td class="column-code">Mock repositories for unit tests</td>
+                    <td class="column-code">Mock services in integration tests</td>
+                </tr>
+                <tr>
+                    <td class="column-primary">Extensibility</td>
+                    <td>Open/Closed principle</td>
+                    <td class="column-code">New repository implementations</td>
+                    <td class="column-code">New strategy implementations</td>
+                </tr>
+                <tr>
+                    <td class="column-primary">State Management</td>
+                    <td>Unidirectional data flow</td>
+                    <td class="column-code">Redux/MVI with immutable state</td>
+                    <td class="column-code">Event sourcing with snapshots</td>
+                </tr>
+                <tr>
+                    <td class="column-primary">Error Handling</td>
+                    <td>Graceful degradation</td>
+                    <td class="column-code">Try-catch with Result type</td>
+                    <td class="column-code">Exception handling with logging</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

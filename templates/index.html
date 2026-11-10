@@ -24,18 +24,18 @@
 
     <header class="hero">
         <div class="hero-content">
-            <h1>Hi, I'm {{ config.author }}</h1>
-            <p class="subtitle">Full-stack Developer | Open Source Enthusiast</p>
+            <h1>{{ config.author }}</h1>
+            <p class="subtitle">{{ config.subtitle }}</p>
             <div class="cta-buttons">
-                <a href="/projects.html" class="btn btn-primary">View My Work</a>
-                <a href="mailto:{{ config.email }}" class="btn btn-secondary">Get In Touch</a>
+                <a href="/projects.html" class="btn btn-primary">View Projects</a>
+                <a href="/resume.html" class="btn btn-secondary">View Resume</a>
             </div>
         </div>
     </header>
 
     <section class="featured-projects">
         <div class="container">
-            <h2>Featured Projects</h2>
+            <h2>Featured Work &amp; Open Source</h2>
             <div class="projects-grid">
                 {% for project in config.projects[:3] %}
                 <div class="project-card">
@@ -46,12 +46,16 @@
                         <span class="tech-tag">{{ tech }}</span>
                         {% endfor %}
                     </div>
+                    {% if project.github_url or project.demo_url %}
                     <div class="project-links">
-                        <a href="{{ project.github_url }}" target="_blank">GitHub</a>
+                        {% if project.github_url %}
+                        <a href="{{ project.github_url }}" target="_blank" rel="noopener">GitHub</a>
+                        {% endif %}
                         {% if project.demo_url %}
-                        <a href="{{ project.demo_url }}" target="_blank">Demo</a>
+                        <a href="{{ project.demo_url }}" target="_blank" rel="noopener">Demo</a>
                         {% endif %}
                     </div>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
@@ -60,7 +64,7 @@
 
     <section class="skills">
         <div class="container">
-            <h2>Skills</h2>
+            <h2>Technical Stack</h2>
             <div class="skills-grid">
                 {% for category, items in config.skills.items() %}
                 <div class="skill-category">
@@ -78,10 +82,10 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2024 {{ config.author }}. All rights reserved.</p>
+            <p>&copy; 2026 {{ config.author }}. All rights reserved.</p>
             <div class="social-links">
                 {% for platform, url in config.social_links.items() %}
-                <a href="{{ url }}" target="_blank">{{ platform }}</a>
+                <a href="{{ url }}" target="_blank" rel="noopener">{{ platform }}</a>
                 {% endfor %}
             </div>
         </div>

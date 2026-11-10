@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - {{ config.title }}</title>
-    <meta name="description" content="View all projects by {{ config.author }}">
+    <meta name="description" content="Selected Android platform and Applied AI projects by {{ config.author }}">
     <link rel="stylesheet" href="{{ config.portfolio_url }}/static/style.css">
 </head>
 <body>
@@ -24,27 +24,33 @@
 
     <div class="container">
         <section class="projects-section">
-            <h1>My Projects</h1>
+            <h1>Projects &amp; Platform Case Studies</h1>
             <div class="projects-grid">
                 {% for project in config.projects %}
                 <div class="project-card">
                     <h3>{{ project.title }}</h3>
-                    <p class="project-company">{{ project.company }} • {{ project.date }}</p>
+                    {% if project.company or project.date %}
+                    <p class="project-company">{{ project.company }}{% if project.company and project.date %} • {% endif %}{{ project.date }}</p>
+                    {% endif %}
                     <p>{{ project.description }}</p>
                     {% if project.metrics %}
-                    <p class="project-metrics">📊 {{ project.metrics }}</p>
+                    <p class="project-metrics">{{ project.metrics }}</p>
                     {% endif %}
                     <div class="tech-stack">
                         {% for tech in project.technologies %}
                         <span class="tech-tag">{{ tech }}</span>
                         {% endfor %}
                     </div>
+                    {% if project.github_url or project.demo_url %}
                     <div class="project-links">
-                        <a href="{{ project.github_url }}" target="_blank">GitHub</a>
+                        {% if project.github_url %}
+                        <a href="{{ project.github_url }}" target="_blank" rel="noopener">GitHub</a>
+                        {% endif %}
                         {% if project.demo_url %}
-                        <a href="{{ project.demo_url }}" target="_blank">Demo</a>
+                        <a href="{{ project.demo_url }}" target="_blank" rel="noopener">Demo</a>
                         {% endif %}
                     </div>
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
@@ -53,10 +59,10 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2024 {{ config.author }}. All rights reserved.</p>
+            <p>&copy; 2026 {{ config.author }}. All rights reserved.</p>
             <div class="social-links">
                 {% for platform, url in config.social_links.items() %}
-                <a href="{{ url }}" target="_blank">{{ platform }}</a>
+                <a href="{{ url }}" target="_blank" rel="noopener">{{ platform }}</a>
                 {% endfor %}
             </div>
         </div>

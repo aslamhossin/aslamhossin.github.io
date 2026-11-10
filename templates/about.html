@@ -24,27 +24,28 @@
 
     <div class="container">
         <section class="about-section">
-            <h1>About Me</h1>
+            <h1>About</h1>
             <div class="about-content">
                 <p>
-                    I'm a passionate full-stack developer with a love for creating elegant solutions to complex problems.
-                    With experience in both frontend and backend development, I enjoy building applications that are not just
-                    functional but also delightful to use.
+                    I am a Senior Android Engineer based in Kawasaki, Japan, with over 9 years of experience shipping
+                    consumer mobile applications across e-commerce, digital payments, news aggregation, and live sports media.
                 </p>
                 <p>
-                    When I'm not coding, you can find me exploring new technologies, contributing to open source projects,
-                    or sharing knowledge with the developer community.
+                    My day-to-day focus sits at the intersection of mobile platform engineering and developer productivity:
+                    migrating large legacy XML apps to Jetpack Compose and MVI without breaking weekly releases, maintaining
+                    shared multi-module UI and media libraries, and building AI-assisted engineering tools (JetBrains Koog
+                    IntelliJ plugins, Claude Code and Codex MCP workflows, and Python FastAPI multimodal evaluation pipelines).
                 </p>
-                
-                <h2>Get In Touch</h2>
+
+                <h2>Connect</h2>
                 <p>
-                    Feel free to reach out to me if you'd like to collaborate on a project, discuss an idea, or simply
-                    want to connect. You can find me on:
+                    You can inspect my open-source code on GitHub, read my Android architecture articles on Medium, or reach out directly via LinkedIn or email:
                 </p>
                 <ul class="about-links">
                     {% for platform, url in config.social_links.items() %}
-                    <li><a href="{{ url }}" target="_blank">{{ platform|title }}</a></li>
+                    <li><a href="{{ url }}" target="_blank" rel="noopener">{{ platform|title }}</a></li>
                     {% endfor %}
+                    <li><a href="mailto:{{ config.email }}">{{ config.email }}</a></li>
                 </ul>
             </div>
         </section>
@@ -52,10 +53,10 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2024 {{ config.author }}. All rights reserved.</p>
+            <p>&copy; 2026 {{ config.author }}. All rights reserved.</p>
             <div class="social-links">
                 {% for platform, url in config.social_links.items() %}
-                <a href="{{ url }}" target="_blank">{{ platform }}</a>
+                <a href="{{ url }}" target="_blank" rel="noopener">{{ platform }}</a>
                 {% endfor %}
             </div>
         </div>

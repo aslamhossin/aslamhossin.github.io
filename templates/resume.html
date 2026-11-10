@@ -24,47 +24,24 @@
     </nav>
 
     <div class="resume-container">
-        <!-- Header -->
         <header class="resume-header">
             <h1>{{ config.author }}</h1>
             <p class="resume-title">{{ config.title_short }}</p>
             <div class="resume-contact">
-                <span>📍 {{ config.location }}</span>
-                <span>📧 <a href="mailto:{{ config.email }}">{{ config.email }}</a></span>
-                <span>📱 {{ config.phone }}</span>
-                <span>🔗 <a href="{{ config.social_links.linkedin }}" target="_blank">LinkedIn</a></span>
-                <span>🐙 <a href="{{ config.social_links.github }}" target="_blank">GitHub</a></span>
+                <span>{{ config.location }}</span>
+                <span><a href="mailto:{{ config.email }}">{{ config.email }}</a></span>
+                <span><a href="{{ config.social_links.linkedin }}" target="_blank" rel="noopener">linkedin.com/in/aslamhossin</a></span>
+                <span><a href="{{ config.social_links.github }}" target="_blank" rel="noopener">github.com/aslamhossin</a></span>
             </div>
         </header>
 
-        <!-- Professional Summary -->
         <section class="resume-section">
-            <h2>Professional Summary</h2>
-            <p>
-                Android engineer with 9+ years building high-performance mobile applications in Kotlin and Java. 
-                Proven fintech expertise through PayPay project work (network security, SDK integration) and current 
-                in-house operations at Rakuten. Strong ownership track record: led Java-to-Kotlin migration (60% conversion, 3% crash reduction) 
-                and architectural refactoring initiatives. Experienced in TDD, agile practices, and cross-functional collaboration.
-            </p>
+            <h2>Summary</h2>
+            <p>{{ config.summary }}</p>
         </section>
 
-        <!-- Key Qualifications -->
         <section class="resume-section">
-            <h2>Key Qualifications</h2>
-            <ul class="qualifications-list">
-                <li>9+ years Android development; expert in Kotlin, Java, Jetpack Compose, coroutines, Flow, MVVM, Redux State Management, Clean Architecture</li>
-                <li>Advanced expertise in Redux architecture pattern for scalable state management; inspired by Redux.js foundation with proven implementation across multiple production apps</li>
-                <li>Fintech experience: PayPay network security implementation, SDK integrations (Sendbird, Firebase); current role at Rakuten fintech ecosystem</li>
-                <li>Proven ownership: Led Java-to-Kotlin migration (60% codebase, 3% crash reduction); refactored Rakuten core features resolving technical debt</li>
-                <li>Test-Driven Development: Hands-on TDD experience on PayPay and Rakuten projects; JUnit5, MockK with CI/CD pipelines</li>
-                <li>Strong REST API integration, agile development, code reviews, and in-house service operation</li>
-                <li>Business conversational English; actively learning Japanese</li>
-            </ul>
-        </section>
-
-        <!-- Work Experience -->
-        <section class="resume-section">
-            <h2>Work Experience</h2>
+            <h2>Experience</h2>
             {% for job in config.work_experience %}
             <div class="job-entry">
                 <div class="job-header">
@@ -82,9 +59,24 @@
             {% endfor %}
         </section>
 
-        <!-- Education -->
         <section class="resume-section">
-            <h2>Education</h2>
+            <h2>Open Source &amp; Applied AI Projects</h2>
+            {% for project in config.projects[:2] %}
+            <div class="job-entry">
+                <div class="job-header">
+                    <h3>{{ project.title }}</h3>
+                    <span class="job-date">{{ project.date }}</span>
+                </div>
+                {% if project.github_url %}
+                <p class="job-company"><a href="{{ project.github_url }}" target="_blank" rel="noopener">{{ project.github_url }}</a></p>
+                {% endif %}
+                <p class="job-description">{{ project.description }}</p>
+            </div>
+            {% endfor %}
+        </section>
+
+        <section class="resume-section">
+            <h2>Education &amp; Certifications</h2>
             {% for edu in config.education %}
             <div class="education-entry">
                 <div class="edu-header">
@@ -93,13 +85,12 @@
                 </div>
                 <p class="edu-institution">{{ edu.institution }}</p>
                 {% if edu.certificate %}
-                <p class="edu-certificate">Certificate: {{ edu.certificate }}</p>
+                <p class="edu-certificate">Credential ID: {{ edu.certificate }}</p>
                 {% endif %}
             </div>
             {% endfor %}
         </section>
 
-        <!-- Skills -->
         <section class="resume-section">
             <h2>Technical Skills</h2>
             <div class="skills-grid">
@@ -112,32 +103,17 @@
             </div>
         </section>
 
-        <!-- Currently Learning -->
-        <section class="resume-section learning-section">
-            <h2>Currently Learning</h2>
-            <div class="learning-grid">
-                {% for category, items in config.learning_skills.items() %}
-                <div class="learning-block">
-                    <h4>🚀 {{ category }}</h4>
-                    <p>{{ items|join(', ') }}</p>
-                </div>
-                {% endfor %}
-            </div>
-        </section>
-
-        <!-- Download Resume -->
         <section class="resume-download">
-            <p>📥 <a href="javascript:window.print()" class="btn btn-primary">Download PDF Resume</a></p>
-            <p class="download-hint">Use your browser's print dialog (Cmd+P) → Save as PDF</p>
+            <p><a href="javascript:window.print()" class="btn btn-primary">Print / Save as PDF</a></p>
         </section>
     </div>
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2024 {{ config.author }}. All rights reserved.</p>
+            <p>&copy; 2026 {{ config.author }}. All rights reserved.</p>
             <div class="social-links">
                 {% for platform, url in config.social_links.items() %}
-                <a href="{{ url }}" target="_blank">{{ platform }}</a>
+                <a href="{{ url }}" target="_blank" rel="noopener">{{ platform }}</a>
                 {% endfor %}
             </div>
         </div>

@@ -139,7 +139,7 @@ SITE_CONFIG = {
         'Architecture & Testing': ['MVI', 'MVVM', 'Clean Architecture', 'Multi-Module Gradle', 'Dagger Hilt', 'REST APIs', 'Java Servlets', 'JUnit 5', 'MockK', 'Turbine', 'kotlinx-coroutines-test', 'TDD'],
         'AI Engineering & Developer Tooling': ['Claude Code', 'Codex Workflows', 'Model Context Protocol (MCP)', 'JetBrains Koog', 'IntelliJ IDEA Plugin SDK', 'Python FastAPI', 'Pydantic v2', 'Google Gemini API', 'EvalBench', 'Pytest'],
         'CI/CD, Performance & Release': ['Gradle', 'R8/ProGuard', 'Bitrise', 'GitHub Actions', 'Firebase App Distribution', 'Crashlytics', 'Android Profiler', 'LeakCanary', 'Benchmark APIs', 'Git'],
-        'Languages': ['English (Professional Working Proficiency)', 'Japanese (Basic)'],
+        'Languages': ['English (Professional Working Proficiency)'],
     },
     'blog': {
         'platform': 'Medium',
